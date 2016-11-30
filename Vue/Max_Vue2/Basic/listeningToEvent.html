@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS</title>
+    <script src="../../../vendor/vue.js"></script>
+</head>
+<body>
+<div id="exercise">
+    <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+    <p>{{ age  * 3 }}</p>
+    <P>{{ random() }}</P>
+    <div>
+        <img v-bind:src="image" style="width: 100px; height: 100px;">
+    </div>
+    <div>
+        <input type="text" v-bind:value="name">
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+  new Vue({
+    el: '#exercise',
+    data: {
+      name: 'Max',
+      age: 27,
+      image: 'https://vuejs.org/images/logo.png'
+    },
+    methods: {
+
+      random: function () {
+        return Math.random();
+      }
+    }
+  });
+</script>
+</html>
